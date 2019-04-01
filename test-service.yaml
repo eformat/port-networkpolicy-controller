@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: port-np-controller-test
+  annotations:
+    network-zone: 'true'
+    network-zone.additional-ports: 9999/TCP,8888/UDP
+spec:
+  selector:
+    app: port-np-controller-test
+  ports:
+  - port: 8080
