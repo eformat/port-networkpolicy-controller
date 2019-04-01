@@ -1,6 +1,6 @@
-# Namespace NetworkPolicy Metacontroller controller
+# Port/Protocol NetworkPolicy Metacontroller controller
 
-Networkpolicy applied based on Namespace annotations
+Networkpolicy applied based on Service annotations - microsegmentation
 
 annotation example (these go on a service object):
 
@@ -12,7 +12,7 @@ annotation example (these go on a service object):
 
 `network-zone: 'true'`- enable network-policy
 
-`network-zone.additional-ports: 9999/TCP,8888/UDP` - allow ingress traffic on these ports/protocols
+`network-zone.additional-ports: 9999/TCP,8888/UDP` - allow ingress traffic on these ports/protocols as well as ingress ports
 
 This controller uses the metacontroller framework.
 
